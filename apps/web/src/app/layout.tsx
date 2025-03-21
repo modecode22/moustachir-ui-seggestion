@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import {Tajawal} from "next/font/google";
+import { Tajawal } from "next/font/google";
 import "@/styles/globals.css";
 
 const tajawal = Tajawal({
   subsets: ["arabic", "latin"],
   weight: ["400", "500", "700", "800"],
 });
-
 
 export const metadata: Metadata = {
   title: "إعادة تصميم مستشير",
@@ -20,9 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-      <body className={`${tajawal.className} bg-neutral-50 text-neutral-700`}>
-        {children}
-      </body>
+      <body className={`${tajawal.className} bg-neutral-50 text-neutral-700`}>{children}</body>
     </html>
   );
 }
