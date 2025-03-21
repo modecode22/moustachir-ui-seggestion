@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-      <body className={`${tajawal.className} bg-neutral-50`}>
+      <body className={`${tajawal.className} bg-neutral-50 text-neutral-700`}>
         {children}
       </body>
     </html>
