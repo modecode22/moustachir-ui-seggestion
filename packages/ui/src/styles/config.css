@@ -1,0 +1,98 @@
+@theme {
+  --shadow-2xs: 0 1px oklch(0.27 0.12 254.12 / 5%);
+  --shadow-xs: 0 1px 2px 0 oklch(0.27 0.12 254.12 / 5%);
+  --shadow-sm: 0 1px 3px 0 oklch(0.27 0.12 254.12 / 5%), 0 1px 2px -1px oklch(0.27 0.12 254.12 / 5%);
+  --shadow-md: 0 4px 6px -1px oklch(0.27 0.12 254.12 / 5%), 0 2px 4px -2px oklch(0.27 0.12 254.12 / 5%);
+  --shadow-lg: 0 10px 15px -3px oklch(0.27 0.12 254.12 / 5%), 0 4px 6px -4px oklch(0.27 0.12 254.12 / 5%);
+  --shadow-xl: 0 20px 25px -5px oklch(0.27 0.12 254.12 / 5%), 0 8px 10px -6px oklch(0.27 0.12 254.12 / 5%);
+  --shadow-2xl: 0 25px 50px -12px oklch(0.27 0.12 254.12 / 5%);
+  
+  
+  --drop-shadow-xs: 0 1px 1px oklch(0.27 0.12 254.12 / 5%);
+  --drop-shadow-sm: 0 1px 2px oklch(0.27 0.12 254.12 / 5% );
+  --drop-shadow-md: 0 3px 3px oklch(0.27 0.12 254.12 / 5% );
+  --drop-shadow-lg: 0 4px 4px oklch(0.27 0.12 254.12 / 5% );
+  --drop-shadow-xl: 0 9px 7px oklch(0.27 0.12 254.12 / 5% );
+  --drop-shadow-2xl: 0 25px 25px oklch(0.27 0.12 254.12 / 5%);
+
+  --radius: 20px;
+
+  /* Extended Font Sizes */
+  --text-7\.5xl: 5.5rem;
+  --text-7\.5xl--line-height: 1;
+  --text-10xl: 10rem;
+  --text-10xl--line-height: 1;
+  --text-11xl: 12rem;
+  --text-11xl--line-height: 1;
+  --text-12xl: 14rem;
+  --text-12xl--line-height: 1;
+  --text-14xl: 18rem;
+  --text-14xl--line-height: 1;
+  --text-16xl: 24rem;
+  --text-16xl--line-height: 1;
+  --text-20xl: 30rem;
+  --text-20xl--line-height: 1;
+
+  /* Custom Breakpoints */
+  --breakpoint-xs: 23.75rem; /* 380px */
+  --breakpoint-xxl: 87.5rem; /* 1400px */
+
+  /* Default Border Radius */
+  --radius-DEFAULT: 1.25rem; /* 20px */
+
+  /* Custom Colors */
+  /* Neutral Colors */
+  --color-neutral-50:  hsl(222, 10%, 99%);
+  --color-neutral-100: hsl(222, 10%, 97%);
+  --color-neutral-200: hsl(222, 10%, 95%);
+  --color-neutral-300: hsl(222, 10%, 90%);
+  --color-neutral-400: hsl(222, 10%, 80%);
+  --color-neutral-500: hsl(222, 10%, 60%);
+  --color-neutral-600: hsl(222, 10%, 45%);
+  --color-neutral-700: hsl(222, 10%, 35%);
+  --color-neutral-800: hsl(222, 10%, 20%);
+  --color-neutral-900: hsl(222, 10%, 10%);
+  --color-neutral-950: hsl(222, 10%, 5%);
+
+  /* Primary Colors */
+  --color-primary-50:  hsl(222, 77%, 80%);
+  --color-primary-100: hsl(222, 77%, 65%);
+  --color-primary-200: hsl(222, 77%, 50%);
+  --color-primary-300: hsl(222, 77%, 35%);
+  --color-primary-400: hsl(222, 77%, 15%);
+  --color-primary-500: hsl(222, 77%, 10%);
+  --color-primary-600: hsl(222, 77%, 8%);
+  --color-primary-700: hsl(222, 77%, 6%);
+  --color-primary-800: hsl(222, 77%, 4%);
+  --color-primary-900: hsl(222, 77%, 2%);
+  --color-primary-950: hsl(222, 77%, 1%);
+
+  /* Secondary Colors */
+  --color-primary-50:  hsl(272, 76%, 85%);
+  --color-primary-100: hsl(272, 76%, 70%);
+  --color-primary-200: hsl(272, 76%, 65%);
+  --color-primary-300: hsl(272, 76%, 55%);
+  --color-primary-400: hsl(272, 76%, 40%);
+  --color-primary-500: hsl(272, 76%, 30%);
+  --color-primary-600: hsl(272, 76%, 25%);
+  --color-primary-700: hsl(272, 76%, 20%);
+  --color-primary-800: hsl(272, 76%, 15%);
+  --color-primary-900: hsl(272, 76%, 10%);
+  --color-primary-950: hsl(272, 76%, 5%);
+
+
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+}

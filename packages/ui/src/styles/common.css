@@ -1,0 +1,47 @@
+
+.border, .border-t, .border-b, .border-l,  .border-r { 
+  border-color: var(--color-neutral-100);
+}
+
+/* Specify the width and color of the scrollbar */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+
+
+/* Handle of the scrollbar */
+*::-webkit-scrollbar-thumb {
+  background-color: #DBDBDB;
+  border-radius: 5px;
+}
+
+/* Track of the scrollbar */
+*::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+/* Specify the width and color of the scrollbar for Firefox */
+/* Note: Firefox supports scrollbar styling using `scrollbar-color` and `scrollbar-width` properties */
+/* For simplicity, this example assumes Firefox 64 and later versions that support these properties */
+/* For older versions of Firefox, you may need to use -moz properties */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #DBDBDB #fff;
+}
+
+/* Specify the width and color of the scrollbar for Internet Explorer and Edge */
+/* Note: This example assumes Microsoft Edge Chromium or later versions */
+/* For Internet Explorer, you may need to use -ms properties */
+*::-ms-scrollbar {
+  width: 6px;
+}
+
+*::-ms-thumb {
+  background-color: #DBDBDB;
+  border-radius: 5px;
+}
+
+*::-ms-track {
+  background-color: #fff;
+}
