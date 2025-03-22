@@ -80,6 +80,71 @@
   --color-secondary-900: hsl(272, 76%, 10%);
   --color-secondary-950: hsl(272, 76%, 5%);
 
+  /* Success Colors */
+  --color-success-50:  hsl(141, 100%, 96%);
+  --color-success-100: hsl(141, 100%, 92%);
+  --color-success-200: hsl(141, 100%, 88%);
+  --color-success-300: hsl(141, 100%, 80%);
+  --color-success-400: hsl(141, 100%, 60%);
+  --color-success-500: hsl(141, 100%, 40%);
+  --color-success-600: hsl(141, 100%, 30%);
+  --color-success-700: hsl(141, 100%, 25%);
+  --color-success-800: hsl(141, 100%, 20%);
+  --color-success-900: hsl(141, 100%, 15%);
+  --color-success-950: hsl(141, 100%, 10%);
+
+  /* Warning Colors */
+  --color-warning-50:  hsl(45, 100%, 96%);
+  --color-warning-100: hsl(45, 100%, 92%);
+  --color-warning-200: hsl(45, 100%, 88%);
+  --color-warning-300: hsl(45, 100%, 80%);
+  --color-warning-400: hsl(45, 100%, 60%);
+  --color-warning-500: hsl(45, 100%, 40%);
+  --color-warning-600: hsl(45, 100%, 30%);
+  --color-warning-700: hsl(45, 100%, 25%);
+  --color-warning-800: hsl(45, 100%, 20%);
+  --color-warning-900: hsl(45, 100%, 15%);  
+  --color-warning-950: hsl(45, 100%, 10%);
+
+  /* Error Colors */
+  --color-error-50:  hsl(0, 100%, 96%);
+  --color-error-100: hsl(0, 100%, 92%);
+  --color-error-200: hsl(0, 100%, 88%);
+  --color-error-300: hsl(0, 100%, 80%);
+  --color-error-400: hsl(0, 100%, 60%);
+  --color-error-500: hsl(0, 100%, 40%);
+  --color-error-600: hsl(0, 100%, 30%);
+  --color-error-700: hsl(0, 100%, 25%);
+  --color-error-800: hsl(0, 100%, 20%);
+  --color-error-900: hsl(0, 100%, 15%);  
+  --color-error-950: hsl(0, 100%, 10%);
+
+  /* Info Colors */
+  --color-info-50:  hsl(207, 100%, 96%);
+  --color-info-100: hsl(207, 100%, 92%);
+  --color-info-200: hsl(207, 100%, 88%);
+  --color-info-300: hsl(207, 100%, 80%);
+  --color-info-400: hsl(207, 100%, 60%);
+  --color-info-500: hsl(207, 100%, 40%);
+  --color-info-600: hsl(207, 100%, 30%);
+  --color-info-700: hsl(207, 100%, 25%);
+  --color-info-800: hsl(207, 100%, 20%);
+  --color-info-900: hsl(207, 100%, 15%);  
+  --color-info-950: hsl(207, 100%, 10%);
+
+  /* Emerald Colors */
+  --color-emerald-50:  hsl(155, 100%, 96%);
+  --color-emerald-100: hsl(155, 100%, 92%);
+  --color-emerald-200: hsl(155, 100%, 88%);
+  --color-emerald-300: hsl(155, 100%, 80%);
+  --color-emerald-400: hsl(155, 100%, 60%);
+  --color-emerald-500: hsl(155, 100%, 40%);
+  --color-emerald-600: hsl(155, 100%, 30%);
+  --color-emerald-700: hsl(155, 100%, 25%);
+  --color-emerald-800: hsl(155, 100%, 20%);
+  --color-emerald-900: hsl(155, 100%, 15%);  
+  --color-emerald-950: hsl(155, 100%, 10%);
+
 
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
