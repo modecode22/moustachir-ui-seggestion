@@ -50,7 +50,7 @@ export function HeroAnimations({
         <h1 className="mb-6 text-6xl font-bold tracking-tight sm:text-6xl md:mb-8 md:text-8xl">
           <span className="overflow-y-visible text-neutral-900">{title1}</span>
           <br />
-          <span className="from-primary-500 via-primary-600 to-primary-700 overflow-y-visible bg-gradient-to-r bg-clip-text text-transparent">
+          <span className="text-primary-500 overflow-y-visible ">
             {title2}
           </span>
         </h1>
