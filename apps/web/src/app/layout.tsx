@@ -1,6 +1,7 @@
+import Header from "@/components/layout/Header/Header";
+import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Tajawal } from "next/font/google";
-import "@/styles/globals.css";
 
 const tajawal = Tajawal({
   subsets: ["arabic", "latin"],
@@ -20,8 +21,12 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <body className={`${tajawal.className} relative bg-neutral-50 text-neutral-700`}>
+        <Header />
         {children}
-        <div style={{backgroundImage:"url('/noise.png')"}}  className="[z-index:-1] pointer-events-none absolute inset-0 bg-repeat bg-[size:180px] opacity-[0.035] dark:opacity-[0.015] [z-index:0]"></div>
+        <div
+          style={{ backgroundImage: "url('/noise.png')" }}
+          className="pointer-events-none absolute inset-0 [z-index:-1] [z-index:0] bg-[size:180px] bg-repeat opacity-[0.035] dark:opacity-[0.015]"
+        ></div>
       </body>
     </html>
   );

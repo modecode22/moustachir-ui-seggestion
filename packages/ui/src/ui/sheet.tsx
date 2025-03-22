@@ -31,7 +31,7 @@ const SheetOverlay = React.forwardRef<
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName;
 
 const sheetVariants = cva(
-  "fixed z-50 gap-4 bg-neutral-50 border-neutral-100 p-6 shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=open]:duration-500 data-[state=open]:animate-in data-[state=closed]:animate-out",
+  "fixed z-50 gap-4 bg-neutral-50 border-neutral-100 py-4 shadow-lg transition ease-in-out data-[state=closed]:duration-300 data-[state=open]:duration-500 data-[state=open]:animate-in data-[state=closed]:animate-out",
   {
     variants: {
       side: {
@@ -63,10 +63,10 @@ const SheetContent = React.forwardRef<React.ComponentRef<typeof SheetPrimitive.C
         <SheetPrimitive.Title className="sr-only">{title}</SheetPrimitive.Title>
         <div className="flex flex-row-reverse items-center justify-between">
           <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-none disabled:pointer-events-none">
-            <LuAlignJustify size={30} />
+            <LuAlignJustify className="size-8 fill-primary-500" />
             <span className="sr-only">Close</span>
           </SheetPrimitive.Close>
-          <Logo className="w-40 pr-2" />
+          <Logo className="w-40 pr-2 text-primary-500" />
         </div>
 
         {children}

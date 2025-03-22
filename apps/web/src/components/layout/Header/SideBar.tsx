@@ -46,8 +46,8 @@ const SideBar = ({
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger className="flex xl:hidden">
-        <LuAlignJustify size={30} />
+      <SheetTrigger className="flex xl:hidden cursor-pointer">
+        <LuAlignJustify className="size-8 text-primary-500" />
       </SheetTrigger>
       <SheetContent
         side={lang === "en" ? "left" : "right"}

@@ -11,13 +11,13 @@ const Header = () => {
   return (
     <header
       id="main-header"
-      className="fixed top-0 right-0 left-0 z-50 bg-transparent py-4 transition-all duration-300"
+      className="fixed top-0 right-0 left-0 z-50 bg-transparent py-4 transition-all duration-300 w-full"
     >
       <HeaderWithStyles />
 
-      <div className="container mx-auto flex w-full flex-row-reverse items-center justify-between px-4 md:px-6">
+      <div className="  flex w-full flex-row-reverse items-center justify-between p-sections">
         <Link href={"/"} className="flex">
-          <Logo className="w-40 lg:inline lg:w-46" />
+          <Logo className="w-40 lg:inline lg:w-46 text-primary-500" />
         </Link>
         <div className="flex items-center">
           {/* Desktop navigation - only visible on desktop */}
@@ -33,7 +33,7 @@ const Header = () => {
             ))}
           </nav>
           {/* Mobile menu button - only visible on mobile */}
-          <div className="ml-4 flex lg:hidden">
+          <div className="flex lg:hidden">
             <SideBar lang="ar" HeaderLinks={navigation} />
           </div>
         </div>

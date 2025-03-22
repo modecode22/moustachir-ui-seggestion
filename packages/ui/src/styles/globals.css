@@ -4,4 +4,8 @@
 @import "./common.css";
 @import "./typography.css";
 @import "./animations.css";
-@import './tailwindcss-animate.css';
+@import "./tailwindcss-animate.css";
+
+.p-sections {
+  @apply px-6 md:px-10 lg:px-20 xl:px-40;
+}
