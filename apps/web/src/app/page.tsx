@@ -1,15 +1,13 @@
 import { Hero } from "@/components/sections/hero/Hero";
-import Header from "@/components/layout/Header/Header";
 import HowWeAre from "@/components/sections/HowWeAre";
+import Services from "@/components/sections/Serviecs";
 
 export default function Home() {
   return (
-    <div >
+    <div>
       <Hero />
       <HowWeAre />
-      <section className="h-50">
-
-      </section>
+      <Services />
     </div>
   );
 }
