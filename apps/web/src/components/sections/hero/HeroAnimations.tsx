@@ -49,11 +49,11 @@ export function HeroAnimations({
 
       <motion.div custom={1} variants={fadeUpVariants} initial="hidden" animate="visible">
         <h1 className="mb-6 text-6xl font-bold tracking-tight sm:text-6xl md:mb-8 md:text-8xl">
-          <span className="bg-gradient-to-b from-neutral-800 to-neutral-900 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-b from-neutral-800 to-neutral-900 bg-clip-text text-transparent overflow-y-visible">
             {title1}
           </span>
           <br />
-          <span className="from-primary-500 via-primary-600 to-primary-700 bg-gradient-to-r bg-clip-text text-transparent">
+          <span className="from-primary-500 via-primary-600 to-primary-700 bg-gradient-to-r bg-clip-text text-transparent overflow-y-visible">
             {title2}
           </span>
         </h1>
