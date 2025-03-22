@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import {Tajawal} from "next/font/google";
+import { Tajawal } from "next/font/google";
 import "@/styles/globals.css";
 
 const tajawal = Tajawal({
   subsets: ["arabic", "latin"],
   weight: ["400", "500", "700", "800"],
 });
-
 
 export const metadata: Metadata = {
   title: "إعادة تصميم مستشير",
