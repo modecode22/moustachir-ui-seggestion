@@ -4,9 +4,9 @@ import { ReactNode } from "react";
 
 export default function Services() {
   return (
-    <section className="p-sections py-4">
+    <section className="p-sections py-20">
       <div className="@container mx-auto">
-        <h2 className="text-primary-500 mt-14 text-right text-5xl font-bold lg:text-6xl">خدماتنا</h2>
+        <h2 className="text-primary-500  text-right text-5xl font-bold lg:text-6xl">خدماتنا</h2>
         <div className="mx-auto mt-12 grid max-w-sm gap-8 *:text-center md:mt-14 @min-4xl:max-w-full @min-4xl:grid-cols-3">
           {services.map((service) => {
             return (
