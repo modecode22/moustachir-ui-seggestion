@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
+    "@react-google-maps/api": "^2.20.6",
     "@repo/ui": "workspace:*",
     "class-variance-authority": "^0.7.1",
     "framer-motion": "^12.4.7",
