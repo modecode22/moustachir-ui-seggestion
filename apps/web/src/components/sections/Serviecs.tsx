@@ -4,15 +4,15 @@ import { ReactNode } from "react";
 
 export default function Services() {
   return (
-    <section className="p-sections py-20">
-      <div className="@container mx-auto">
+    <section className="p-sections py-20 w-full">
+      <div className="@container w-full mx-auto">
         <h2 className="text-primary-500  text-right text-5xl font-bold lg:text-6xl">خدماتنا</h2>
-        <div className="mx-auto mt-12 grid max-w-sm gap-8 *:text-center md:mt-14 @min-4xl:max-w-full @min-4xl:grid-cols-3">
+        <div className="mx-auto mt-12 grid  gap-8 *:text-center md:mt-14 @min-4xl:max-w-full @min-4xl:grid-cols-3 grid-cols-1 md:grid-cols-2 w-full ">
           {services.map((service) => {
             return (
               <Card
                 key={service.title}
-                className="group overflow-hidden rounded border border-zinc-100 bg-white p-1 shadow-lg shadow-zinc-100/50 transition-all duration-300 hover:-translate-y-1 hover:border-blue-100 hover:shadow-xl"
+                className="group overflow-hidden rounded border border-zinc-100 bg-white p-1 shadow-lg shadow-zinc-100/50 transition-all duration-300 hover:-translate-y-1 hover:border-blue-100 hover:shadow-xl w-full"
               >
                 <CardHeader className="pb-4">
                   <CardDecorator>
