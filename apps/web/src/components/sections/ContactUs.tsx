@@ -4,6 +4,7 @@ import { Input } from "@repo/ui/input";
 import { Label } from "@repo/ui/label";
 import { Textarea } from "@repo/ui/textarea";
 import Link from "next/link";
+import { PiFacebookLogo, PiInstagramLogo, PiLinkedinLogo } from "react-icons/pi";
 import LocationMap from "./LocationMap";
 
 const ContactUs = () => {
@@ -14,16 +15,16 @@ const ContactUs = () => {
         <h2 className="z-1 mb-4 text-5xl font-bold text-neutral-50 lg:text-6xl">إتصل بنا</h2>
       </header>
 
-      <section className="p-sections flex -translate-y-10 flex-row gap-6">
-        <section className="flex w-full flex-col">
-          <section className="grid grid-cols-2 gap-4">
+      <section className="p-sections flex -translate-y-10 flex-col-reverse gap-6 md:flex-row">
+        <section className="flex w-full flex-col gap-6">
+          <section className="flex flex-wrap gap-4 pt-6 text-lg md:pt-20">
             <section className="flex flex-col gap-4">
               <section className="flex gap-2">
-                الإيميل
+                <span className="font-semibold">الإيميل</span>
                 <Link href="mailto:contact@moustachir.dz">contact@moustachir.dz</Link>
               </section>
               <section className="flex gap-2">
-                الهاتف
+                <span className="font-semibold">الهاتف</span>{" "}
                 <Link dir="ltr" href="tel:+213 560 57 53 19">
                   +213 560 57 53 19
                 </Link>
@@ -31,18 +32,24 @@ const ContactUs = () => {
             </section>
 
             <section className="flex flex-col gap-4">
-            <section className="flex gap-2">
-              العنوان
-              <p>ليدو، برج الكيفان</p>
+              <section className="flex gap-2">
+                <span className="font-semibold">العنوان</span> <p>ليدو، برج الكيفان</p>
+              </section>
+              <section className="flex  gap-4 flex-wrap">
+                <span className="font-semibold">قنوات التواصل الإجتماعي</span>
+                <section className="flex gap-2">
+                  <Button variant={"white-solid"} size={"small-icon"}>
+                    <PiLinkedinLogo />
+                  </Button>
+                  <Button variant={"white-solid"} size={"small-icon"}>
+                    <PiFacebookLogo />
+                  </Button>
+                  <Button variant={"white-solid"} size={"small-icon"}>
+                    <PiInstagramLogo />
+                  </Button>
+                </section>
+              </section>
             </section>
-            <section className="flex gap-2">
-              قنوات التواصل الإجتماعي
-              <Button  variant={'white-solid'} size={'small-icon'}>
-
-              </Button>
-            </section>
-            </section>
-      
           </section>
           <LocationMap
             googleMapsUrl={
@@ -50,7 +57,7 @@ const ContactUs = () => {
             }
           />
         </section>
-        <section className="flex max-w-md flex-col gap-4 rounded bg-white p-6 shadow-sm">
+        <section className="flex w-full flex-col gap-4 rounded bg-white p-6 shadow-sm md:max-w-md">
           <p>للتواصل معنا يمكنك ملء النموذج التالي وسنقوم بالرد عليك في أقرب وقت ممكن.</p>
           <Label className="flex flex-col gap-2">
             <span className="px-2">الاسم</span>

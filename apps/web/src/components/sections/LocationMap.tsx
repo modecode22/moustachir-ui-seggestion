@@ -13,7 +13,7 @@ interface MapComponentProps {
 const LocationMap: React.FC<MapComponentProps> = ({
   googleMapsUrl,
   width = "100%",
-  height = "400px",
+  height = "300px",
   zoomOffset = 2,
   onLocationSelect,
 }) => {
