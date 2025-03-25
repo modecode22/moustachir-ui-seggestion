@@ -5,7 +5,7 @@ const page = () => {
   return (
     <section className="mt-22 h-[100vh]">
       <div className="relative">
-        <div className="p-sections relative flex h-[35vh] w-full items-center justify-between gap-4 overflow-hidden bg-white bg-gradient-to-tr from-neutral-100 from-10% via-neutral-200 via-60% to-70% py-4 shadow-inner lg:flex-row">
+        <div className="p-sections relative flex h-[35vh] w-full items-center justify-between gap-4 overflow-hidden bg-white bg-gradient-to-tr from-neutral-100 from-10% via-neutral-200 via-60% to-70% py-4 lg:flex-row">
           <h4 dir="ltr" className="z-10 mr-[350px] self-end font-serif text-5xl text-neutral-50 lg:text-6xl">
             5000DA/h
           </h4>
