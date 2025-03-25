@@ -9,3 +9,6 @@
 .p-sections {
   @apply px-6 md:px-10 lg:px-20 xl:px-40;
 }
+.m-sections {
+  @apply mx-6 md:mx-10 lg:mx-20 xl:mx-40;
+}
