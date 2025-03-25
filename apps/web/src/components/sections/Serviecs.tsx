@@ -8,6 +8,7 @@ export default function Services() {
       <div className="@container w-full mx-auto">
         <h2 className="text-primary-500  text-right text-5xl font-bold lg:text-6xl">خدماتنا</h2>
         <div className="mx-auto mt-12 grid  gap-8 *:text-center md:mt-14 @min-4xl:max-w-full @min-4xl:grid-cols-3 grid-cols-1 md:grid-cols-2 w-full ">
+
           {services.map((service) => {
             return (
               <Card
@@ -17,7 +18,7 @@ export default function Services() {
                 <CardHeader className="pb-4">
                   <CardDecorator>
                     <service.icon
-                      className="size-6 text-blue-600 transition-all duration-300 group-hover:scale-110 group-hover:text-purple-600"
+                      className="group-hover:text-secondary-300 text-primary-200 size-6 transition-all duration-300 group-hover:scale-110"
                       aria-hidden
                     />
                   </CardDecorator>
@@ -39,13 +40,12 @@ const CardDecorator = ({ children }: { children: ReactNode }) => (
   <div className="relative mx-auto size-36 duration-200">
     <div
       aria-hidden
-      className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-200 to-purple-200 opacity-0 blur-md transition-all duration-500 group-hover:opacity-60 group-hover:blur-xl"
+      className="from-primary-100/50 to-secondary-100/50 absolute inset-0 rounded-full bg-gradient-to-r opacity-0 blur-md transition-all duration-500 group-hover:opacity-60 group-hover:blur-xl"
     />
     <div
       aria-hidden
-      className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-300 to-purple-400 opacity-0 blur-lg transition-all delay-75 duration-500 group-hover:opacity-50 group-hover:blur-2xl"
+      className="from-primary-200/50 to-secondary-200/50 absolute inset-0 rounded-full bg-gradient-to-tr opacity-0 blur-lg transition-all delay-75 duration-500 group-hover:opacity-50 group-hover:blur-2xl"
     />
-
     <div className="absolute inset-0 m-auto flex size-14 items-center justify-center rounded border border-zinc-200 bg-white shadow-md transition-all duration-300 group-hover:border-blue-200 group-hover:shadow-lg">
       <div className="relative z-10 transition-transform duration-300 group-hover:scale-110">{children}</div>
     </div>

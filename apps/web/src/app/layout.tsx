@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header/Header";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
@@ -25,8 +26,9 @@ export default function RootLayout({
         {children}
         <div
           style={{ backgroundImage: "url('/noise.png')" }}
-          className="pointer-events-none absolute inset-0 [z-index:-1]  bg-[size:180px] bg-repeat opacity-[0.035] dark:opacity-[0.015]"
+          className="pointer-events-none absolute inset-0 [z-index:-1] bg-[size:180px] bg-repeat opacity-[0.035] dark:opacity-[0.015]"
         ></div>
+        <Footer />
       </body>
     </html>
   );
