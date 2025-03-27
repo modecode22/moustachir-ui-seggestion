@@ -6,8 +6,8 @@ import Tooltip from "../common/Tooltip";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-500 p-sections from-primary-300 via-primary-400 overflow-hidden bg-gradient-to-tr from-10% via-60% to-70% py-4 pt-10 shadow-custom-reverse">
-      <div className="container flex flex-col items-center">
+    <footer className="bg-primary-500 p-sections w-full from-primary-300 via-primary-400 shadow-custom-reverse overflow-hidden bg-gradient-to-tr from-10% via-60% to-70% py-4 pt-10">
+      <div className="w-full flex flex-col items-center">
         <OutlineLogo className="mx-auto mb-2" strokeStyles="stroke-primary-300" lang="ar" />
 
         <div className="relative w-full">
@@ -16,20 +16,20 @@ export default function Footer() {
           </p>
 
           <div className="flex w-full items-center justify-between md:justify-between">
-            <div className="flex gap-4">
+            <div className="flex gap-4 text-neutral-300">
               <Tooltip label="لينكد إن">
                 <Link href="https://www.linkedin.com/company/moustachir" aria-label="لينكد إن" target="_blank">
-                  <PiLinkedinLogo size={40} className="text-neutral-300" />
+                  <PiLinkedinLogo className="size-6" />
                 </Link>
               </Tooltip>
               <Tooltip label="فيسبوك">
                 <Link href="https://www.facebook.com/moustachirr" aria-label="فيسبوك" target="_blank">
-                  <PiFacebookLogo size={40} className="text-neutral-300" />
+                  <PiFacebookLogo className="size-6" />
                 </Link>
               </Tooltip>
               <Tooltip label="انستجرام">
                 <Link href="https://www.instagram.com/moustachir.consulting/" aria-label="انستجرام" target="_blank">
-                  <PiInstagramLogo size={40} className="text-neutral-300" />
+                  <PiInstagramLogo className="size-6" />
                 </Link>
               </Tooltip>
             </div>

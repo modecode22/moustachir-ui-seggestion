@@ -15,7 +15,7 @@ const ContactUs = () => {
         <h2 className="z-1 mb-4 text-5xl font-bold text-neutral-50 lg:text-6xl">إتصل بنا</h2>
       </header>
 
-      <section className="p-sections flex -translate-y-10 flex-col-reverse gap-6 md:flex-row">
+      <section className="p-sections flex -translate-y-10 flex-col-reverse gap-6 md:flex-row pb-20">
         <section className="flex w-full flex-col gap-6">
           <section className="flex flex-wrap gap-4 pt-6 text-lg md:pt-20">
             <section className="flex flex-col gap-4">

@@ -19,7 +19,7 @@ const Tooltip = ({ children, label, delayDuration = 100 }: TooltipProps) => {
       <DefaultTooltip delayDuration={delayDuration}>
         <TooltipTrigger asChild>{children}</TooltipTrigger>
         <TooltipContent>
-          <TooltipArrow />
+          <TooltipArrow className="fill-neutral-50" />
           <p className="!m-0 !text-sm">{label}</p>
         </TooltipContent>
       </DefaultTooltip>
