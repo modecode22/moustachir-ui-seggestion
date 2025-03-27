@@ -6,7 +6,7 @@ import Tooltip from "../common/Tooltip";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-500 p-sections from-primary-300 via-primary-400 overflow-hidden bg-gradient-to-tr from-10% via-60% to-70% py-4 pt-10 shadow-inner">
+    <footer className="bg-primary-500 p-sections from-primary-300 via-primary-400 overflow-hidden bg-gradient-to-tr from-10% via-60% to-70% py-4 pt-10 shadow-custom-reverse">
       <div className="container flex flex-col items-center">
         <OutlineLogo className="mx-auto mb-2" strokeStyles="stroke-primary-300" lang="ar" />
 

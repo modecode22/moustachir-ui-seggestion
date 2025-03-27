@@ -11,25 +11,25 @@ const Header = () => {
   return (
     <header
       id="main-header"
-      className="fixed top-0 right-0 left-0 z-50 bg-transparent py-4 transition-all duration-300 w-full"
+      className="fixed top-0 right-0 left-0 z-50 bg-transparent text-neutral-50 py-4 transition-all duration-200 w-full"
     >
       <HeaderWithStyles />
 
       <div className="  flex w-full flex-row-reverse items-center justify-between p-sections">
         <Link href={"/"} className="flex">
-          <Logo className="w-40 lg:inline lg:w-46 text-primary-500" />
+          <Logo className="w-40 lg:inline lg:w-46 " />
         </Link>
         <div className="flex items-center">
           {/* Desktop navigation - only visible on desktop */}
           <nav className="hidden lg:flex lg:gap-x-10">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className="text-muted-foreground hover:text-foreground after:bg-primary text-md relative font-medium transition-colors after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 after:transition-all hover:after:w-full"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
           {/* Mobile menu button - only visible on mobile */}

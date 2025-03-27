@@ -10,7 +10,7 @@ import LocationMap from "./LocationMap";
 const ContactUs = () => {
   return (
     <>
-      <header className="bg-primary-500 from-primary-300 via-primary-400 p-sections relative flex h-[20vh] w-full items-center justify-between gap-4 overflow-hidden bg-gradient-to-tr from-10% via-60% to-70% py-4 shadow-inner lg:flex-row">
+      <header className="bg-primary-500 from-primary-300 via-primary-400 p-sections relative flex h-[20vh] w-full items-center justify-between gap-4 overflow-hidden bg-gradient-to-tr from-10% via-60% to-70% py-4 shadow-custom-both lg:flex-row">
         <AnimatedSecondaryLogo className="absolute mt-26 w-180 md:w-full lg:mt-54" />
         <h2 className="z-1 mb-4 text-5xl font-bold text-neutral-50 lg:text-6xl">إتصل بنا</h2>
       </header>
