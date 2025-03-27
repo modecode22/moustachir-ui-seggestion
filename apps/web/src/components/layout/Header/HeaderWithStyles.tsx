@@ -11,7 +11,7 @@ const HeaderWithStyles = () => {
 
     const handleScroll = () => {
       const offset = window.scrollY;
-      if (!path.startsWith("/consultants")) {
+      if (!path.startsWith("/consultants/")) {
         header.classList.add("text-primary-500");
         header.classList.remove("text-neutral-50");
         if (offset > 60) {
