@@ -6,7 +6,9 @@
   --shadow-lg: 0 10px 15px -3px oklch(0.27 0.12 254.12 / 5%), 0 4px 6px -4px oklch(0.27 0.12 254.12 / 5%);
   --shadow-xl: 0 20px 25px -5px oklch(0.27 0.12 254.12 / 5%), 0 8px 10px -6px oklch(0.27 0.12 254.12 / 5%);
   --shadow-2xl: 0 25px 50px -12px oklch(0.27 0.12 254.12 / 5%);
-  
+  --shadow-custom: inset 2px 0px 10px 0 hsl(222, 77%, 10%);
+  --shadow-custom-reverse: inset 0px 2px 10px 0 hsl(222, 77%, 10%);
+  --shadow-custom-both: inset 2px 2px 10px 0 hsl(222, 77%, 10%);
   
   --drop-shadow-xs: 0 1px 1px oklch(0.27 0.12 254.12 / 5%);
   --drop-shadow-sm: 0 1px 2px oklch(0.27 0.12 254.12 / 5% );
