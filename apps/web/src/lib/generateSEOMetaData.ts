@@ -1,6 +1,6 @@
 import { Metadata } from "next/types";
 
-interface SEOParams {
+type SEOParams = {
   title: string;
   description: string;
   imageUrl: string;
@@ -26,6 +26,7 @@ export function generateSEOMetadata({
   siteName = "Moustachir | مستشير",
 }: SEOParams): Metadata {
   const metadata: Metadata = {
+    metadataBase: new URL("https://moustachir.dz"),
     title,
     description,
     openGraph: {

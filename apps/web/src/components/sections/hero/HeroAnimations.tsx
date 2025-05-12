@@ -1,9 +1,11 @@
 "use client";
-import { Button } from "@repo/ui/button";
 import Logo from "@repo/ui/icons/Logo";
+import { cn } from "@repo/ui/lib/utils";
+import { buttonVariants } from "@repo/ui/stylesui/buttons";
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 
-interface HeroAnimationsProps {
+type HeroAnimationsProps = {
   badge?: string;
   title1: string;
   title2: string;
@@ -67,8 +69,8 @@ export function HeroAnimations({
         animate="visible"
         className="flex w-full items-center justify-center gap-4"
       >
-        <Button variant={"primary-outline"}>{seccondButtonText}</Button>
-        <Button>{buttonText}</Button>
+        <Link href="/consultants" className={cn(buttonVariants({variant:"primary-outline"}))} >{seccondButtonText}</Link>
+        <Link className={cn(buttonVariants())} href="/#contact-us">{buttonText}</Link>
       </motion.div>
     </>
   );

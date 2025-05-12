@@ -1,10 +1,9 @@
 "use client";
-// components/layout/ElegantShapes.tsx
 import { motion } from "framer-motion";
 import { cn } from "@repo/ui/lib/utils";
 import Image from "next/image";
 
-interface ElegantShapeProps {
+type ElegantShapeProps = {
   className?: string;
   delay?: number;
   width?: number;
@@ -20,7 +19,6 @@ function ElegantShape({
   width = 400,
   height = 100,
   rotate = 0,
-  gradient = "from-white/[0.08]",
   image = "/1.png",
 }: ElegantShapeProps) {
   return (

@@ -5,6 +5,8 @@ import OurMission from "@/components/sections/OurMission";
 import Services from "@/components/sections/Serviecs";
 
 export default function Home() {
+
+
   return (
     <div>
       <Hero />

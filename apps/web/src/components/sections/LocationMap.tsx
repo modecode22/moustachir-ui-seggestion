@@ -2,7 +2,7 @@
 import React from "react";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 
-interface MapComponentProps {
+type MapComponentProps ={ 
   googleMapsUrl: string;
   width?: string;
   height?: string;
@@ -14,7 +14,6 @@ const LocationMap: React.FC<MapComponentProps> = ({
   googleMapsUrl,
   width = "100%",
   height = "300px",
-  zoomOffset = 2,
   onLocationSelect,
 }) => {
   const containerStyle = {
@@ -22,22 +21,16 @@ const LocationMap: React.FC<MapComponentProps> = ({
     height,
   };
 
-  // Convert DMS coordinates to decimal degrees
   const parseDMSCoordinates = (url: string) => {
     try {
-      // Decode the URL first
       const decodedUrl = decodeURIComponent(url);
-      
-      // Try to extract the final coordinates from the URL (most accurate)
-      const finalCoordsMatch = decodedUrl.match(/!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/);
+            const finalCoordsMatch = decodedUrl.match(/!3d(-?\d+\.\d+)!4d(-?\d+\.\d+)/);
       if (finalCoordsMatch && finalCoordsMatch[1] && finalCoordsMatch[2]) {
         return {
           lat: parseFloat(String(finalCoordsMatch[1])),
           lng: parseFloat(String(finalCoordsMatch[2]))
         };
       }
-
-      // Try to extract coordinates from @lat,lng format
       const coordsMatch = decodedUrl.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/);
       if (coordsMatch && coordsMatch[1] && coordsMatch[2]) {
         return {
@@ -45,8 +38,6 @@ const LocationMap: React.FC<MapComponentProps> = ({
           lng: parseFloat(String(coordsMatch[2]))
         };
       }
-
-      // Try to extract DMS coordinates
       const dmsMatch = decodedUrl.match(/place\/(\d+)°(\d+)'(\d+\.\d+)"([NS])\+(\d+)°(\d+)'(\d+\.\d+)"([EW])/);
       if (dmsMatch && dmsMatch.length >= 9) {
         const latDeg = String(dmsMatch[1]);
@@ -57,34 +48,28 @@ const LocationMap: React.FC<MapComponentProps> = ({
         const lonMin = String(dmsMatch[6]);
         const lonSec = String(dmsMatch[7]);
         const lonDir = String(dmsMatch[8]);
-        
         let lat = Number(latDeg) + Number(latMin)/60 + Number(latSec)/3600;
         let lng = Number(lonDeg) + Number(lonMin)/60 + Number(lonSec)/3600;
-        
         if (latDir === 'S') lat = -lat;
         if (lonDir === 'W') lng = -lng;
-        
         return { lat, lng };
       }
-      
       return null;
     } catch (error) {
       console.error('Error parsing coordinates:', error);
       return null;
     }
   };
-
-  // Extract coordinates from Google Maps URL
   const coordinates = parseDMSCoordinates(googleMapsUrl);
   const center = coordinates || { lat: 36.7420545, lng: 3.1912555 }; // Using exact coordinates as fallback
-  const zoom = 17; // Setting a default zoom level for detailed view
+  const zoom = 17; // default zoom level
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!,
   });
 
-  const [map, setMap] = React.useState<google.maps.Map | null>(null);
-  const [selectedLocation, setSelectedLocation] = React.useState<google.maps.LatLng | null>(null);
+  const [, setMap] = React.useState<google.maps.Map | null>(null);
+  const [, setSelectedLocation] = React.useState<google.maps.LatLng | null>(null);
 
   const onLoad = React.useCallback((map: google.maps.Map) => {
     setMap(map);
@@ -101,9 +86,7 @@ const LocationMap: React.FC<MapComponentProps> = ({
     }
   }, [onLocationSelect]);
 
-  console.log(googleMapsUrl, "from map component");
-
-  // Custom style inspired by the provided color palette
+  // Custom style
   const customStyle = [
     { elementType: "geometry", stylers: [{ color: "#EFF0F0" }] },
     { elementType: "labels.text.stroke", stylers: [{ color: "#99B9EF" }] },
@@ -210,13 +193,14 @@ const LocationMap: React.FC<MapComponentProps> = ({
   };
 
   return isLoaded ? (
+
     <GoogleMap
       mapContainerStyle={{...containerStyle,  borderRadius:20, boxShadow:"0 1px 2px 0 rgb(0 0 0 / 0.15)", borderWidth:"2px", borderColor:"#EFF0F0"}}
       options={mapOptions}
       onLoad={onLoad}
       onUnmount={onUnmount}
       onClick={handleMapClick}
-    >
+      >
       <Marker position={center} />
     </GoogleMap>
   ) : (

@@ -1,11 +1,24 @@
-import React from 'react'
+import { Metadata } from "next";
+import { generateSEOMetadata } from "@/lib/generateSEOMetaData";
+import { ConsultantsList } from "@/components/consultants/ConsultantsList";
 
-const page = () => {
+export const metadata: Metadata = generateSEOMetadata({
+  title: "مستشارونا | مستشير",
+  description: "تعرف على أفضل المستشارين المختصين في مختلف المجالات",
+  imageUrl: "/og-consultants.jpg",
+  canonicalUrl: "/consultants",
+});
+
+export default function ConsultantsPage() {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <main className="min-h-screen p-sections w-full">
 
-export default page
+
+      {/* Main Content */}
+      <section className="my-26">
+        {/* Consultants list component */}
+        <ConsultantsList />
+      </section>
+    </main>
+  );
+}

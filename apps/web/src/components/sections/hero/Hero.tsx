@@ -1,7 +1,7 @@
 import { ElegantShapes } from "./ElegantShape";
 import { HeroAnimations } from "./HeroAnimations";
 
-interface HeroProps {
+type HeroProps = {
   badge?: string;
   title1?: string;
   title2?: string;
@@ -20,13 +20,10 @@ export function Hero({ badge = "مستشير", title1 = "نرشدكم", title2 =
       className="relative flex min-h-screen w-full justify-center overflow-hidden bg-neutral-100 pt-44 sm:items-center sm:pt-0"
       dir="rtl"
     >
-      {/* Static background gradient - server rendered */}
       <div className="absolute inset-0" />
-      {/* Client-side shapes that don't impact SEO */}
       <ElegantShapes />
       <div className="relative z-10 container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-3xl text-center">
-          {/* SEO-friendly server-rendered content (visible to crawlers) */}
           <div className="sr-only">
             <div>{badge}</div>
             <h1>
@@ -35,7 +32,6 @@ export function Hero({ badge = "مستشير", title1 = "نرشدكم", title2 =
             <p>{description}</p>
             <button>{buttonText}</button>
           </div>
-          {/* Visible animated content (for visual users) */}
           <HeroAnimations
             badge={badge}
             title1={title1}
