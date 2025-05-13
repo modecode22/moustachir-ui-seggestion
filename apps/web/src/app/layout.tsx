@@ -1,5 +1,6 @@
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header/Header";
+import PostHogProvider from "@/components/providers/PostHogProviders";
 import "@/styles/globals.css";
 import type { Metadata } from "next";
 import { Tajawal } from "next/font/google";
@@ -21,14 +22,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl">
-      <body className={`${tajawal.className} relative bg-neutral-50 text-neutral-700 selection:bg-primary-50/50 selection:text-primary-500`}>
-        <Header />
-        {children}
-        <div
-          style={{ backgroundImage: "url('/noise.png')" }}
-          className="pointer-events-none absolute inset-0 [z-index:-1] bg-[size:180px] bg-repeat opacity-[0.035] dark:opacity-[0.015]"
-        ></div>
-        <Footer />
+      <body
+        className={`${tajawal.className} selection:bg-primary-50/50 selection:text-primary-500 relative bg-neutral-50 text-neutral-700`}
+      >
+        <PostHogProvider>
+          <Header />
+          {children}
+          <div
+            style={{ backgroundImage: "url('/noise.png')" }}
+            className="pointer-events-none absolute inset-0 [z-index:-1] bg-[size:180px] bg-repeat opacity-[0.035] dark:opacity-[0.015]"
+          ></div>
+          <Footer />
+        </PostHogProvider>
       </body>
     </html>
   );
