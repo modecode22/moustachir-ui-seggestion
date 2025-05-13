@@ -2,6 +2,8 @@ import { Button } from "@repo/ui/button";
 import AnimatedSecondaryLogo from "@repo/ui/icons/AnimatedSecondaryLogo";
 import { Input } from "@repo/ui/input";
 import { Label } from "@repo/ui/label";
+import { cn } from "@repo/ui/lib/utils";
+import { buttonVariants } from "@repo/ui/stylesui/buttons";
 import { Textarea } from "@repo/ui/textarea";
 import Link from "next/link";
 import { PiFacebookLogo, PiInstagramLogo, PiLinkedinLogo } from "react-icons/pi";
@@ -10,12 +12,15 @@ import LocationMap from "./LocationMap";
 const ContactUs = () => {
   return (
     <>
-      <header id="contact-us" className="bg-primary-500 from-primary-300 via-primary-400 p-sections relative flex h-[20vh] w-full items-center justify-between gap-4 overflow-hidden bg-gradient-to-tr from-10% via-60% to-70% py-4 shadow-custom-both lg:flex-row">
+      <header
+        id="contact-us"
+        className="bg-primary-500 from-primary-300 via-primary-400 p-sections shadow-custom-both relative flex h-[20vh] w-full items-center justify-between gap-4 overflow-hidden bg-gradient-to-tr from-10% via-60% to-70% py-4 lg:flex-row"
+      >
         <AnimatedSecondaryLogo className="absolute mt-26 w-180 md:w-full lg:mt-54" />
         <h2 className="z-1 mb-4 text-5xl font-bold text-neutral-50 lg:text-6xl">إتصل بنا</h2>
       </header>
 
-      <section className="p-sections flex -translate-y-10 flex-col-reverse  gap-6 md:flex-row pb-20">
+      <section className="p-sections flex -translate-y-10 flex-col-reverse gap-6 pb-20 md:flex-row">
         <section className="flex w-full flex-col gap-6">
           <section className="flex flex-wrap gap-4 pt-6 text-lg md:pt-20">
             <section className="flex flex-col gap-4">
@@ -30,23 +35,31 @@ const ContactUs = () => {
                 </Link>
               </section>
             </section>
-
             <section className="flex flex-col gap-4">
               <section className="flex gap-2">
                 <span className="font-semibold">العنوان</span> <p>ليدو، برج الكيفان</p>
               </section>
-              <section className="flex  gap-4 flex-wrap">
+              <section className="flex flex-wrap gap-4">
                 <span className="font-semibold">قنوات التواصل الإجتماعي</span>
                 <section className="flex gap-2">
-                  <Button variant={"white-solid"} size={"small-icon"}>
+                  <Link
+                    href={"https://www.linkedin.com/company/moustachir"}
+                    className={cn(buttonVariants({ variant: "white-solid", size: "small-icon" }))}
+                  >
                     <PiLinkedinLogo />
-                  </Button>
-                  <Button variant={"white-solid"} size={"small-icon"}>
+                  </Link>
+                  <Link
+                    href={"https://www.facebook.com/moustachirr"}
+                    className={cn(buttonVariants({ variant: "white-solid", size: "small-icon" }))}
+                  >
                     <PiFacebookLogo />
-                  </Button>
-                  <Button variant={"white-solid"} size={"small-icon"}>
+                  </Link>
+                  <Link
+                    href={"https://www.instagram.com/moustachir.consulting/"}
+                    className={cn(buttonVariants({ variant: "white-solid", size: "small-icon" }))}
+                  >
                     <PiInstagramLogo />
-                  </Button>
+                  </Link>
                 </section>
               </section>
             </section>
@@ -57,7 +70,7 @@ const ContactUs = () => {
             }
           />
         </section>
-        <section className="flex w-full flex-col p-6 p gap-4 rounded bg-white  shadow-sm md:max-w-md">
+        <section className="p flex w-full flex-col gap-4 rounded bg-white p-6 shadow-sm md:max-w-md">
           <p>للتواصل معنا يمكنك ملء النموذج التالي وسنقوم بالرد عليك في أقرب وقت ممكن.</p>
           <Label className="flex flex-col gap-2">
             <span className="px-2">الاسم</span>

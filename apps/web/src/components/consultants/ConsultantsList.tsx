@@ -136,8 +136,8 @@ export function ConsultantsList() {
   return (
     <div className="space-y-8"> {/* Added consistent spacing for children */}
       {/* Filters Section */}
-      <div className="flex flex-col gap-4 rounded border border-neutral-200 bg-white p-4 shadow-sm md:flex-row md:items-center md:justify-between md:gap-6">
-      <div className="relative w-full md:max-w-sm">
+      <div className="flex flex-col gap-4 rounded border border-neutral-200 bg-white p-4 shadow-sm lg:flex-row lg:items-center lg:justify-between lg:gap-6">
+      <div className="relative w-full lg:max-w-sm">
           {/* Search Icon: Positioned inside the left padding area */}
           <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3.5">
             <PiMagnifyingGlass className="h-5 w-5 text-neutral-400" aria-hidden="true" />
@@ -151,7 +151,7 @@ export function ConsultantsList() {
       className="h-11 w-full rounded border border-neutral-300 bg-white py-2 pl-11  text-sm text-neutral-700 placeholder-neutral-500 shadow-sm focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-secondary-500/70 transition-all duration-150 ease-in-out"
           />
         </div>
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center ">
           {/* Field filter */}
           <Select
             value={fieldSelectValue}
@@ -232,7 +232,7 @@ export function ConsultantsList() {
               variant="dark-ghost" 
               size="sm" 
               onClick={clearAllFilters}
-              className="h-auto px-2 py-1 text-xs text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900"
+              className="h-auto px-2 py-1 text-xs  text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900"
             >
               <PiBroom className="mr-1.5 h-4 w-4" />
               مسح الكل

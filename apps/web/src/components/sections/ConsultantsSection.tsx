@@ -14,7 +14,7 @@ export default function ConsultantsSection() {
         <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <h2 className="text-primary-500 text-right text-5xl font-bold lg:text-6xl">مستشارونا</h2>
           <Link href="/consultants">
-            <Button variant="primary-outline" size="lg" className="whitespace-nowrap">
+            <Button variant="primary-outline" size="lg" className="whitespace-nowrap hidden md:block">
               عرض الكل
             </Button>
           </Link>
