@@ -19,7 +19,7 @@ export function ConsultantCard({ consultant }: ConsultantCardProps) {
   
   return (
     <div className="group overflow-hidden">
-      <Link href={`/consultants/consultant?id=${consultantId}`}>
+      <Link href={`/consultants/${consultantId}`}>
         <div className="aspect-square w-full rounded object-cover object-top overflow-hidden">
           <Image 
             className="w-full h-full object-cover object-top grayscale transition-all duration-500 hover:grayscale-0 group-hover:grayscale-0 group-hover:aspect-[12/10] transform-gpu group-hover:scale-110" 
