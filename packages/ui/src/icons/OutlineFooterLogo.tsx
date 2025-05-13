@@ -27,7 +27,7 @@ const OutlineLogo = ({ className, strokeStyles, lang = "ar" }: OutlineLogoProps)
   };
 
   return (
-    <div ref={ref} className="overflow-hidden">
+    <div ref={ref} className="overflow-hidden w-full">
       {lang === "ar" ? (
         <AnimatedArabicLogo
           className={className}
@@ -73,8 +73,6 @@ const AnimatedArabicLogo = ({ className, strokeStyles, isInView, pathVariants }:
   return (
     <motion.svg
       className={cn(className)}
-      width="1684"
-      height="307"
       viewBox="0 0 1684 307"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

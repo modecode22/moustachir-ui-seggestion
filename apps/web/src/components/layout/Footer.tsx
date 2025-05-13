@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="bg-primary-500 p-sections w-full from-primary-300 via-primary-400 shadow-custom-reverse overflow-hidden bg-gradient-to-tr from-10% via-60% to-70% py-4 pt-10">
       <div className="w-full flex flex-col items-center">
-        <OutlineLogo className="mx-auto mb-2" strokeStyles="stroke-primary-300" lang="ar" />
+        <OutlineLogo className="mx-auto mb-2 w-full" strokeStyles="stroke-primary-300" lang="ar" />
 
         <div className="relative w-full">
           <p className="mb-10 text-center text-neutral-300 md:absolute md:top-1/2 md:left-1/2 md:mb-0 md:-translate-x-1/2 md:-translate-y-1/2">
